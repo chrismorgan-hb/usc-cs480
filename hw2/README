@@ -1,0 +1,100 @@
+Name: Christopher Morgan
+Username: christjm
+HW: 2
+Date Submitted: 3/7/04
+Class: CSCI 480
+Semester: Sp2004
+*******************************************************************************
+
+Files submitted:
+----------------
+camera.cc \ define a camera object
+camera.h  / used for camera matricies
+
+framebuffer.cc \ define a framebuffer object
+framebuffer.h  / used to draw lines and write to file
+
+globals.h - global definitions
+
+light.cc \ define a light object
+light.h  / used to store information about lights
+
+Makefile - used to compile the project
+
+matrix.cc \ define a matrix object
+matrix.h  / supports multiplication by matricies and vectors
+
+model.cc \ define a model object
+model.h  / has points, faces, and transformations
+
+polygonedge.cc \ define a polygonedge object
+polygonedge.h  / used by scanline functions
+
+renderer.cc \ define a renderer object
+renderer.h  / ties all classes together to read file, render it, dump to output
+
+rgbcolor.cc \ define an rgbcolor object
+rgbcolor.h  / used to clean up code
+
+stack.cc \ define a stack object
+stack.h  / used to multiply points by the overall view matrix
+
+utility.cc \ define utility functions
+utility.h  / only used to determine which octant a line is in
+ 
+vector.cc \ define a vector object
+vector.h  / supports dot and cross product, as well as homogenize
+
+shaded.cc - main file, takes command line args and calls renderer
+*******************************************************************************
+
+Compilation
+-----------
+command> gmake
+
+see Makefile for complete details if you want
+*******************************************************************************
+
+Execution
+---------
+command> shaded <shadingType> <xRes> <yRes> <filename>
+
+where 	<shadingType> is flat, gouraud, or phong
+	<xRes> is the width of the viewing window
+	<yRes> is the height of the viewing window
+	<filename> is the OpenInventor file
+
+When the program finishes, it will produce <image.ppm>
+which must be viewed using irfanview on windows
+xv will not display it
+*******************************************************************************
+
+Notes
+-----
+1) If an image has a camera position that is inside the model, an error
+   will occur.  However, we were told that this would never happen by the
+   professor.
+
+2) Clipping/culling were not implemented per professor's instructions.  Models
+   with lines extending outside of the window may result in errors.
+
+3) I assume that vectors describing rotations around x, y, or z axis are unit
+   vectors.  All other rotation vectors can be of any magnitude.
+
+4) Rotation angles must be specified in degrees in the OpenInventor file.
+
+5) Inline comments are available in the code, especially in confusing sections.
+*******************************************************************************
+
+Known Bugs
+----------
+1) Slight artifacts in all three shading types due to a rounding error
+   somewhere in my algorithm.  If I manage to fix it, I will resubmit.
+
+2) Same error results in problems with multiple lights using phong shading.
+*******************************************************************************
+
+<EOF>
+
+
+

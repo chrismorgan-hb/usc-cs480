@@ -1,0 +1,11 @@
+Planet | inclination | orbitAngle | orbitDist | axialTilt | spin | size	 |	texFile
+Sun		0.0	0.0		0	0	    1.0    18.45	sunmap
+Mercury		7.0	6.3185		138	0.01	    2.0	   1.05		mercurymap
+Venus		3.39	3.4286		206	2.64	    1.25   2.6		venusmap
+Earth  		0.0	2.5714		256	23.44	    1.0	   2.75		earthmap1k
+Mars		1.85	1.80		318	25.19	    0.8	   1.45		marsmap1k
+Jupiter 	1.31	0.8257		534	3.13	    3.0	   30.8		jupitermap
+Saturn		2.49	0.6175		648	26.73	    3.5	   26.0		saturnmap
+Uranus		0.77	0.4639		784	97.86	    0.9	   11		uranusmap
+Neptune		1.77	0.3939		874	28.31	    1.4	   10.65	neptunemap
+Pluto		17.15	0.3614		926	57.48	    5.0	   0.5		plutomap1k

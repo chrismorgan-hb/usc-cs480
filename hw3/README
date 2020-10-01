@@ -1,0 +1,126 @@
+Name: Christopher Morgan
+Username: christjm
+HW: 3
+Date Submitted: 4/4/04
+Class: CSCI 480
+Semester: Sp2004
+*******************************************************************************
+
+Files submitted:
+----------------
+camera.cc \ define a camera object
+camera.h  / used for camera matricies
+
+framebuffer.cc \ define a framebuffer object
+framebuffer.h  / used to determine screen information
+
+globals.h - global definitions
+
+light.cc \ define a light object
+light.h  / used to store information about lights
+
+Makefile - used to compile the project
+
+matrix.cc \ define a matrix object
+matrix.h  / supports multiplication by matricies and vectors
+
+model.cc \ define a model object
+model.h  / has points, faces, and transformations
+
+README - this file, used for documentation
+
+renderer.cc \ define a renderer object
+renderer.h  / ties all classes together to read file, render it, dump to output
+
+rgbcolor.cc \ define an rgbcolor object
+rgbcolor.h  / used to clean up code
+
+stack.cc \ define a stack object
+stack.h  / used to multiply points by the overall view matrix
+
+utility.cc \ define utility functions
+utility.h  / only used to determine which octant a line is in
+ 
+vector.cc \ define a vector object
+vector.h  / supports dot and cross product, as well as homogenize
+
+OglRenderer.cc - main file, takes command line args and starts OpenGL engine
+*******************************************************************************
+
+Compilation
+-----------
+command> gmake
+
+see Makefile for complete details if you want
+*******************************************************************************
+
+Execution
+---------
+command> OglRenderer <xRes> <yRes> <iv-filename> [<texture-filename>]
+
+where 	<shadingType> is flat, gouraud, or phong
+	<xRes> is the width of the viewing window
+	<yRes> is the height of the viewing window
+	<filename> is the OpenInventor file
+	<texture-filename> is optional ppm file with texture to use, defaults
+	                   to Checkerboard.ppm
+
+Interaction
+-----------
+Hotkeys:
+	r: pan right
+	l: pan left
+	u: pan up
+	d: pan down
+	q: rotate
+	p: rotate
+	+: zoom in
+	-: zoom out
+	R: remove all user transformations
+	w: change display mode (wireframe, shaded, textured, shaded texture)
+
+Mouse:
+	drag: 	      rotates each object around an axis perpendicular to 
+		      drag vector, by an amount relative to magnitude of 
+	              drag vector
+
+	drag + SHIFT: zooms in if drag is upwards, out if drag downwards,
+	              proportional to drag vector magnitude
+
+	drag + CTRL:  translates in direction of drag, proportional to drag
+	              vector magnitude
+
+*******************************************************************************
+
+Notes
+-----
+1) If an image has a camera position that is inside the model, an error
+   will occur.  However, we were told that this would never happen by the
+   professor.
+
+2) I assume that vectors describing rotations around x, y, or z axis are unit
+   vectors.  All other rotation vectors can be of any magnitude.
+
+3) Rotation angles must be specified in degrees in the OpenInventor file.
+
+4) Inline comments are available in the code, especially in confusing sections.
+
+5) Move the mouse SLOWLY to observe realtime rotation, translation, and zoom,
+   especially via remote connections
+
+6) I turned off the ambient components of all PointLights so the shading would
+   look more realistic
+
+7) limits on number of models, lights, etc, can be found in globals.h
+
+8) EC #1 (Textured shading) is implemented, it comes up after texturing when
+   pressing 'w' key
+
+*******************************************************************************
+
+Known Bugs
+----------
+None
+*******************************************************************************
+
+<EOF>

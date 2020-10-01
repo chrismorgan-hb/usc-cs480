@@ -1,0 +1,6 @@
+Planet | Moon | inclination | orbitAngle | orbitDist | axialTilt | spin | size	 |	texFile
+3	 0	5.14		17.33		8.3	1.5424	   17.33   0.75		moonmap1k
+5	 0	0.04		288.9		39.24	0.0	   288.9   1.57		moonmap1k
+5	 1	0.47		144.04		44.22	1.5	   144.04  1.35	        moonmap1k
+5	 2	0.19		71.52		52.2	1.0	   71.52   2.268	moonmap1k
+6	 0	0.33		32.06		50.44	1.942	   32.06   2.22		moonmap1k

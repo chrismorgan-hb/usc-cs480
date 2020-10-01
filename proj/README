@@ -1,0 +1,110 @@
+Name: Christopher Morgan
+Username: christjm
+Assignment: Final Project
+Date Submitted: 5/2/04
+Class: CSCI 480
+Semester: Sp2004
+*******************************************************************************
+
+Files submitted:
+----------------
+globals.h - global definitions
+
+Makefile - used to compile the project
+
+matrix.cc \ define a matrix object
+matrix.h  / supports multiplication by matricies and vectors
+
+moon.cc	  \ define a moon object
+moon.h    / contains info about orbit and drawing, and which planet it 
+	    belongs to
+
+moons.dat   datafile with moon data
+
+planet.cc \ define a planet object
+planet.h  / contains info about orbit, moons, and drawing
+
+planets.dat datafile with planet data
+
+README - this file, used for documentation
+
+vector.cc \ define a vector object
+vector.h  / supports dot and cross product, as well as homogenize
+
+SolarSystem.cc - main file, starts OpenGL engine and initializes solar system
+		 also handles events
+*******************************************************************************
+
+Compilation
+-----------
+command> gmake
+
+see Makefile for complete details if you want
+*******************************************************************************
+
+Execution
+---------
+command> SolarSystem
+
+Interaction
+-----------
+Hotkeys:
+	a: toggle animation on/off
+	f: speed up animation
+	s: slow down animation
+	0: return to solar system view
+	1-9: chase planet (1 = mercury, 9 = pluto)
+	r: pan right
+	l: pan left
+	u: pan up
+	d: pan down
+	+: zoom in
+	-: zoom out
+	R: remove all user transformations
+	
+
+Mouse:
+	drag: 	      rotates entire solar system around an axis 
+		      perpendicular to the drag vector, by an amount 
+		      relative to magnitude of drag vector
+
+	drag + SHIFT: zooms in if drag is upwards, out if drag downwards,
+	              proportional to drag vector magnitude
+
+	drag + CTRL:  translates in direction of drag, proportional to drag
+	              vector magnitude
+
+*******************************************************************************
+
+Notes
+-----
+1) Inline comments are available in the code, especially in confusing sections.
+
+2) Limits can be found in globals.h.
+
+3) Animation speed is optimized for running locally on a Sun.  Use s and f 
+   keys to tune it for your machine.
+
+4) The TA said we do not have to implement rings, so I didn't.  It would be
+   trivial for me to add them.
+
+6) The solar system is not scientifically correct, but all the planets ARE
+   on their own orbital planes.  See planets.dat for details.
+
+7) Moons were added to earth, saturn, and jupiter only, in order to prove that
+   they work.  Adding moons to the other planets caused unneccessary clutter.
+   See moons.dat.
+
+8) In order for texturing to work, download textures from 
+   http://www-scf.usc.edu/~christjm/csci480/textures/
+   Keep the filenames the same, and store them in the textures subdirectory of
+   this project.
+*******************************************************************************
+
+Known Bugs
+----------
+1) Rotation is slightly incorrect mathematically.  However, it works well 
+   enough for my purposes.
+*******************************************************************************
+
+<EOF>
